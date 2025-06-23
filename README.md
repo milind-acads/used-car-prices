@@ -79,6 +79,18 @@ The notebook uses the following libraries:
 
 These libraries are typically pre-installed in Google Colab.
 
+## Conclusions and Insights
+
+Based on the exploratory data analysis and initial modeling, the following conclusions can be drawn:
+
+*   **Impact of Year and Odometer on Price:** The correlation heatmap for a specific model (Toyota Camry) and the scatter plots for the overall dataset clearly indicate a strong positive relationship between the car's `year` and its `price`, and a strong negative relationship between the `odometer` reading and its `price`. Newer cars with lower mileage tend to be more expensive, which aligns with general expectations in the used car market.
+*   **Importance of Data Cleaning:** The initial data exploration revealed several issues, including missing values and extreme outliers in price and odometer readings. The data cleaning steps taken were crucial to ensure that the subsequent analysis and modeling were based on a more reliable dataset. The significant reduction in the number of rows after cleaning highlights the importance of this step.
+*   **Categorical Features Matter:** The analysis of average prices across different categorical features like `transmission`, `drive`, and `title_status` suggests that these factors also influence car prices. For example, the average price variation based on `title_status` indicates that cars with certain title statuses might be significantly cheaper. Including these categorical features (through one-hot encoding) in the models is likely to improve prediction accuracy compared to using only numerical features.
+*   **Model Improvement with More Features:** The progression from `model_1` (using only odometer) to `model_2` (adding year) and `model_3` (adding one-hot encoded title status) shows a likely improvement in model performance (although formal evaluation metrics across models would confirm this). This suggests that a combination of relevant numerical and categorical features is important for predicting used car prices.
+*   **Potential for Segmentation:** The K-Means clustering visually suggests that cars can be grouped into distinct clusters based on features like price, odometer, and year. Analyzing the characteristics of these clusters could provide valuable insights for the used car dealership, potentially helping them segment their inventory or target specific customer groups. For example, one cluster might represent older, high-mileage, lower-priced cars, while another might represent newer, low-mileage, higher-priced vehicles.
+*   **Need for Further Modeling and Evaluation:** The initial linear regression models serve as a starting point. More sophisticated models, feature engineering, and rigorous evaluation (including cross-validation and analysis of residuals) are needed to build a robust price prediction model.
+*   **Specific Car Types and Manufacturers Influence Price:** The decision to remove certain car types (like trucks and luxury brands) and electric cars was based on the assumption that they might have different pricing dynamics. This implies that the type and manufacturer of a car are significant factors in determining its price and might warrant separate analyses or specific handling in the model.
+
 ## Future Work
 
 *   Further feature engineering.
