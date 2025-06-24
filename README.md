@@ -8,7 +8,7 @@ The primary goal is to identify key drivers for used car prices and provide insi
 
 ## Dataset
 
-The original dataset contained information on 3 million used cars. The provided dataset contains information on 426K cars to ensure speed of processing. 
+The original dataset contained information on 3 million used cars. The provided dataset (Kaggle used car data in vehicles.csv ) contains information on 426K cars to ensure speed of processing. 
 
 ## CRISP-DM Framework
 
