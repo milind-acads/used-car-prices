@@ -109,7 +109,9 @@ These libraries are typically pre-installed in Google Colab.
 
 Based on the exploratory data analysis and initial modeling, the following details can be shared with car dealers which can help them in fine tuning their inventory:
 
-*   **Impact of Year and Odometer on Price:** The correlation heatmap for a specific model (Toyota Camry) and the scatter plots for the overall dataset clearly indicate a strong positive relationship between the car's `year` and its `price`, and a strong negative relationship between the `odometer` reading and its `price`. Newer cars with lower mileage tend to be more expensive, which aligns with general expectations in the used car market. Majority of the cars sold were less than 15 years old. Also, majority of the cars sold were fuel type gas and transmission automatic.
+*   **Impact of Year and Odometer on Price:**
+Manufacturing year has highest impact on car prices, foloowed by odometer rating.
+The correlation heatmap for a specific model (Toyota Camry) and the scatter plots for the overall dataset clearly indicate a strong positive relationship between the car's `year` and its `price`, and a strong negative relationship between the `odometer` reading and its `price`. Newer cars with lower mileage tend to be more expensive, which aligns with general expectations in the used car market. Majority of the cars sold were less than 15 years old. Also, majority of the cars sold were fuel type gas and transmission automatic.
 
 *  **Categorical Features Matter:** The analysis of average prices across different categorical features like `transmission`, `drive`, and `title_status` suggests that these factors also influence car prices. For example, the average price variation based on `title_status` indicates that cars with certain title statuses might be significantly cheaper. Including these categorical features (through one-hot encoding) in the models is likely to improve prediction accuracy compared to using only numerical features.
  
