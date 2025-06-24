@@ -30,9 +30,9 @@ The project is structured around the CRISP-DM methodology:
 6.  **Deployment:** (To be added)
 
 ## Exploratory Data Analysis / Data Understanding and Data Preperation Details
-The dataset has 426880 items in the beginning. Here are some observationas about the data:
+The dataset has 426880 items in the beginning. Here are some observations and cleanup steps performed on this data:
 
-1. There are many unrealistic values in pricing like "3736928711" or "1234567890" and many more. All these were deleted
+1. There are many unrealistic values in pricing like "3736928711" or "1234567890" and many more. All those were deleted
 2. Columns like 'id', 'VIN' etc. were deleted as they have no impact on the pricing
 3. There were few cars with high odometer readings like 1000000. Deleted all items with more than 300000 odometer as it is considered outlier
 4. Found and deleted a few cars with less than 100 odometer rating but are older than 2015
@@ -44,14 +44,16 @@ The dataset has 426880 items in the beginning. Here are some observationas about
      2) Condition plays a role in car's price. Average price decreases from new, good, like new, salvage and fair
      3) Transmission plays very little role in car's price. Automatic tranmission is slightly more expensive than manual transmission. But a lot of cars have status as "other" so this may change if accurate status is available for all cars
 
-1. Price vs Odometer
+## Visual Observations
+1. Shows the impact of odometer rating on price. This shows that as the odometer rating increases, the price decreases. However, there is a lot of variation due to other factors such condition, fuel type, title_status, manufacturer and model etc. That is why the price of a rarely used can range from $2,000 to $60,000. The model is developed on this dataset which is diretionally correct but not very accurate
+Price vs Odometer
     ![Price vs Odometer](images/price-odometer.png)
-
-    ![Price vs Odometer](images/heatmap2.png)
-
-    ![Price vs Odometer](images/price-year.png)
-
+2. Shows the impact of manufactured year on price. Shows the impact of manufacturing year on price. This shows that as the car gets old, the price decreases. Same as previous point, there is a lot of variation due to other factors such condition, fuel type, title_status, manufacturer and model etc. That is why the price of even a new car (manufactured after 2020) can range from $2,000 to $60,000. The model is developed on this dataset which is diretionally correct but not very accurate
+    ![Price vs Year](images/price-year.png)
+3. Shows the impact of manufactured year on price for Toyota Camry. In this plot, the dataset is limited to only one model - Toyota Camry. This shows better linear relationship specially between 2008 to 2022. While there is some variance (visibly +/- 10k) in the price, this can be a better dataset to develop a model that predicts the price of the car per model (or models with similar price range).
     ![Price vs Odometer](images/price-year-camry.png)
+4. After all the cleanup, the correlation heatmap shows that there is strong positive correlation between year and price, and strong negative correlation between odometer and price.
+   ![Price vs Odometer](images/heatmap2.png)
 
 ## Analysis Highlights
 
