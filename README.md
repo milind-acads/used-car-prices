@@ -117,9 +117,9 @@ Based on the exploratory data analysis and initial modeling, the following detai
 
 *   **Specific Car Types and Manufacturers Influence Price:** The decision to remove certain car types (like trucks and luxury brands) and electric cars was based on the assumption that they might have different pricing dynamics. This implies that the type and manufacturer of a car are significant factors in determining its price and might warrant separate analyses or specific handling in the model.
 
-These insights need to be further fine tuned and more work is required to better the accuracy of preduction:
+These insights need to be  fine tuned and more work is required to improve the accuracy of preduction:
       
-*   **Data Cleaning:** The initial data exploration revealed several issues, including missing values and extreme outliers in price and odometer readings. The data cleaning steps taken were crucial to ensure that the subsequent analysis and modeling were based on a more reliable dataset. The significant reduction in the number of rows after cleaning highlights the importance of this step.
+*   **Data Cleaning:** The initial data exploration revealed several issues, including missing values and extreme outliers in price and odometer readings. The data cleaning steps taken were crucial to ensure that the subsequent analysis and modeling were based on a more reliable dataset. The significant reduction in the number of rows after cleaning highlights the importance of this step. Further analysis can be further to find other issues, Also, more data specific to a manufacturer and model (if available) can be procured to develop car model specific models for price prediction which can be reallu useful for car dealers. 
 *   **Need for Further Modeling and Evaluation:** The initial linear regression models serve as a starting point. More sophisticated models, feature engineering, and rigorous evaluation (including cross-validation and analysis of residuals) are needed to build a robust price prediction model.
 
 
