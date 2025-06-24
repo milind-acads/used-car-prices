@@ -40,9 +40,9 @@ The dataset has 426880 items in the beginning. Here are some observationas about
 6. Moved electric cars and hybrid cars into a separate dataframe, to be delt with separately
 7. Reduced dataset to car types 'SUV' 'hatchback' 'mini-van' 'sedan' 'wagon' 'van' for developing  models to predict price. Removed car types like trucks, pickup as those vehicles have a very different price range and must be dealt with separately
 8. Drew box plots of average price vs Condition, Title Status and Trasmission which gives some obvious observations such as:
-  1) Title status plays a role in car's price. Average price decreases with title status clean, lien, rebuilt, salvage, parts only and missing
-  2) Condition plays a role in car's price. Average price decreases from new, good, like new, salvage and fair
-  3) Transmission plays very little role in car's price. Automatic tranmission is slightly more expensive than manual transmission. But a lot of cars have status as "other" so this may change if accurate status is available for all cars
+     1) Title status plays a role in car's price. Average price decreases with title status clean, lien, rebuilt, salvage, parts only and missing
+     2) Condition plays a role in car's price. Average price decreases from new, good, like new, salvage and fair
+     3) Transmission plays very little role in car's price. Automatic tranmission is slightly more expensive than manual transmission. But a lot of cars have status as "other" so this may change if accurate status is available for all cars
 
 1. Price vs Odometer
     ![Price vs Odometer](images/price-odometer.png)
