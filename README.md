@@ -1,6 +1,6 @@
-# Analyzing Used Car Prices
+# Introduction - Used Car Prices
 
-This project explores a dataset of used cars to understand the factors that influence their price. The analysis follows the CRISP-DM framework, starting from understanding the business problem to data preparation and initial modeling.  In this project, we will use a Jupyter notebook (included) to complete the exercise to analyse Kaggle used car data in vehicles.csv file in the data folder (can be downloaded and uploaded into data folder for execution) to build a machine learning application that evaluates if vehicles features like Fuel, Condition, Size, Type, manufacturer, year etc. have an impact on vehicle price and can be used to determine used car prices. This evaluation will help the car dealers in maintaining inventory by stocking cars that sells more and procure them at an optimal price.
+This project explores a dataset of used cars to understand the factors that influence their price. The analysis follows the CRISP-DM framework, starting from understanding the business problem to data preparation and initial modeling.  In this project, we will use a Jupyter notebook (included) to complete the exercise to analyse Kaggle used car data in vehicles.csv(!https://github.com/yemifalokun/priceofacar/blob/main/data/vehicles.csv) file in the data folder (can be downloaded and uploaded into data folder for execution) to build a machine learning application that evaluates if vehicles features like Fuel, Condition, Size, Type, manufacturer, year etc. have an impact on vehicle price and can be used to determine used car prices. This evaluation will help the car dealers in maintaining inventory by stocking cars that sells more and procure them at an optimal price.
 
 ## Project Goal
 
@@ -8,7 +8,7 @@ The primary goal is to identify key drivers for used car prices and provide insi
 
 ## Dataset
 
-The dataset used is a subset of a larger Kaggle dataset, containing information on approximately 426K used cars.
+The original dataset contained information on 3 million used cars. The provided dataset contains information on 426K cars to ensure speed of processing. 
 
 ## CRISP-DM Framework
 
