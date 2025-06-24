@@ -29,7 +29,21 @@ The project is structured around the CRISP-DM methodology:
 5.  **Evaluation:** (To be added)
 6.  **Deployment:** (To be added)
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis / Data Understanding and Data Preperation Details
+The dataset has 426880 items in the beginning. Here are some observationas about the data:
+
+1. There are many unrealistic values in pricing like "3736928711" or "1234567890" and many more. All these were deleted
+2. Columns like 'id', 'VIN' etc. were deleted as they have no impact on the pricing
+3. There were few cars with high odometer readings like 1000000. Deleted all items with more than 300000 odometer as it is considered outlier
+4. Found and deleted a few cars with less than 100 odometer rating but are older than 2015
+5. Setup a separate dataframe for all cars mor expensive than 100000. These can skew the data asthese are really pre,ium cars like Rools Royce and should be delt with separately
+6. Moved electric cars and hybrid cars into a separate dataframe, to be delt with separately
+7. Reduced dataset to car types 'SUV' 'hatchback' 'mini-van' 'sedan' 'wagon' 'van' for developing  models to predict price. Removed car types like trucks, pickup as those vehicles have a very different price range and must be dealt with separately
+8. Drew box plots of average price vs Condition, Title Status and Trasmission which gives some obvious observations such as:
+  1) Title status plays a role in car's price. Average price decreases with title status clean, lien, rebuilt, salvage, parts only and missing
+  2) Condition plays a role in car's price. Average price decreases from new, good, like new, salvage and fair
+  3) Transmission plays very little role in car's price. Automatic tranmission is slightly more expensive than manual transmission. But a lot of cars have status as "other" so this may change if accurate status is available for all cars
+
 1. Price vs Odometer
     ![Price vs Odometer](images/price-odometer.png)
 
@@ -48,7 +62,6 @@ The project is structured around the CRISP-DM methodology:
     *   Odometer as a predictor.
     *   Odometer and year as predictors.
     *   Odometer, year, and one-hot encoded title status as predictors.
-*   K-Means clustering was applied to group cars based on numerical features like price, odometer, and year, providing initial insights into car segmentation.
 
 ## Notebook Contents
 
@@ -64,17 +77,18 @@ The notebook contains the following sections:
     *   Filtering by car type and manufacturer.
     *   Analyzing average prices by various categories.
 *   **Modeling:** Building and evaluating initial regression models.
-    *   Linear Regression with Odometer.
-    *   Multiple Linear Regression with Odometer and Year.
-    *   Multiple Linear Regression with Odometer, Year, and Title Status.
-    *   K-Means Clustering for car segmentation.
+    *   One hot encoding on categorical feature title_status 
+    *   Linear Regression to predict price from Odometer.
+    *   Multiple Linear Regression to predict price from Odometer and Year.
+    *   Multiple Linear Regression to predict price from Odometer, Year, and Title Status.
+    *   Lasso Regression to predict price from Odometer and Year.
 
 ## Getting Started
 
 To run this notebook:
 
 1.  Open the notebook in Google Colab.
-2.  Ensure the `data/vehicles.csv` file is accessible in your Colab environment (e.g., by uploading it or mounting your Google Drive).
+2.  Ensure the `data/vehicles.csv` file is accessible in your Jupyter Notebook 
 3.  Run the code cells sequentially.
 
 ## Dependencies
