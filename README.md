@@ -29,6 +29,10 @@ The project is structured around the CRISP-DM methodology:
 5.  **Evaluation:** (To be added)
 6.  **Deployment:** (To be added)
 
+## Exploratory Data Analysis
+1. Price vs Odometer
+    ![Price vs Odometer](images/price-odometer.png)
+
 ## Analysis Highlights
 
 *   Initial correlation analysis on a popular car model showed a positive correlation between year and price, and a negative correlation between odometer and price.
